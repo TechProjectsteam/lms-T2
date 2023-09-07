@@ -7,7 +7,7 @@ export default AuthContext;
 
 export const AuthProvider = ({children}) => {
 
-    let user = 5    
+    let user = 1   
 
 
     let contextData = {

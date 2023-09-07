@@ -35,7 +35,7 @@ export default function ApplyLeave() {
 
   async function fetchEmployees() {
     try {
-      const response = await fetch('http://localhost:8000/tp_lms/employee/'
+      const response = await fetch('https://lms-t2-b-398213.uc.r.appspot.com/tp_lms/employee/'
     );
       const data = await response.json();
       // console.log(data)
@@ -115,7 +115,7 @@ export default function ApplyLeave() {
     const updatedTotalLeaves = updatedEarnedLeaves + updatedCasualLeaves;
 
     try {
-      const response = await axios.post(`http://localhost:8000/tp_lms/`, {
+      const response = await axios.post(`https://lms-t2-b-398213.uc.r.appspot.com/tp_lms/`, {
         emp_id: selectedEmployee,
         leave_type: leaveType,
         days_applied: noOfDays,
@@ -149,7 +149,7 @@ export default function ApplyLeave() {
      
           };
     
-          const response = await axios.put(`http://localhost:8000/tp_lms/employee/${selectedEmployee}`, updatedEmployee);
+          const response = await axios.put(`https://lms-t2-b-398213.uc.r.appspot.com/tp_lms/employee/${selectedEmployee}`, updatedEmployee);
           console.log(response.data);
           setAvailableLeaves({
             earned_leaves: updatedEarnedLeaves,
