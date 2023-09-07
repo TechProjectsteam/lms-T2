@@ -19,7 +19,7 @@ function Profile(props) {
       //  getEmployee()
       async function fetchEmployees() {
         try {
-          const response = await fetch('http://localhost:8000/tp_lms/employee/'
+          const response = await fetch('https://lms-t2-b-398213.uc.r.appspot.com/tp_lms/employee/'
         );
           const data = await response.json();
           // console.log(data)

@@ -56,7 +56,7 @@ function Dashboard(props) {
     //  getEmployee()
     async function fetchEmployees() {
       try {
-        const response = await fetch('http://localhost:8000/tp_lms/employee/'
+        const response = await fetch('https://lms-t2-b-398213.uc.r.appspot.com/tp_lms/employee/'
       );
         const data = await response.json();
         // console.log(data)
@@ -75,7 +75,7 @@ function Dashboard(props) {
     async function fetchLeaves() {
       try {
         // Fetch leave history data
-        const response = await fetch(`http://localhost:8000/tp_lms/`);
+        const response = await fetch(`https://lms-t2-b-398213.uc.r.appspot.com/tp_lms/`);
         const data = await response.json();
         
         if (data && Array.isArray(data)) {
